@@ -6,16 +6,16 @@ Resources:
     Type: AWS::S3::Bucket
     DeletionPolicy: Retain
     Properties:
-      BucketName: STD21038
+      BucketName: std21038
   BucketArnParameter:
     Type: AWS::SSM::Parameter
     Properties:
-      Name: STD21038/s3/bucket-arn
+      Name: /std21038/s3/bucket-arn
       Type: String
       Value: !GetAtt Bucket.Arn
   BucketNameParameter:
     Type: AWS::SSM::Parameter
     Properties:
-      Name: STD21038/s3/bucket-name
+      Name: /std21038/s3/bucket-name
       Type: String
       Value: !Ref Bucket
